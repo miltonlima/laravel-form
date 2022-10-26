@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\FormController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/forms/create', [FormController::class,'create']);
+
+Route::post('/forms',[FormController::class,'store']);
+
+Route::get('/registered', [FormController::class,'index']);
