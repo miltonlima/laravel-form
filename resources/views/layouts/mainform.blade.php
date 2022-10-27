@@ -18,8 +18,8 @@
 
     <!-- CSS da aplicação -->
 
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/scripts.js"></script>
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <script src="../public/js/scripts.js"></script>
 </head>
 
 <body>
