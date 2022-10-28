@@ -43,12 +43,14 @@ class FormController extends Controller
 
         $form->save();
 
-        return redirect('/forms/registered')->with('msg', 'Cadastro realizado com sucesso!');
+        return redirect('/registered')->with('msg', 'Cadastro realizado com sucesso!');
+        //return view('forms.registered');
     }
 
     public function index(){
 
-        return redirect('/registered')->with('msg', 'Evento excluído com sucesso!');
+        //return redirect('/registered')->with('msg', 'Evento excluído com sucesso!');
+        return view('forms.registered');
 
     }
 
