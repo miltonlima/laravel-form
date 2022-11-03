@@ -24,3 +24,13 @@ Route::get('/forms/create', [FormController::class,'create']);
 Route::post('/forms',[FormController::class,'store']);
 
 Route::get('/registered', [FormController::class,'index']);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
