@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\FormController;
+
 use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class,'index']);
@@ -32,3 +34,11 @@ Route::get('/dashboard',[EventController::class,'dashboard'])->middleware('auth'
 Route::post('/events/join/{id}', [EventController::class, 'joinEvent'])->middleware('auth');
 
 Route::delete('/events/leave/{id}', [EventController::class, 'leaveEvent'])->middleware('auth');
+
+Route::get('/forms/create', [FormController::class,'create']);
+
+Route::post('/forms',[FormController::class,'store']);
+
+Route::get('/registered', [FormController::class,'index']);
+
+
