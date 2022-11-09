@@ -59,7 +59,7 @@
                 <tr>
                     <td scropt="row">{{$loop->index + 1}}</td>
                     <td><a href="/events/{{$event->id}}">{{$event->title}}</a></td>
-                    <td>{{ count($event->users) }}</td>
+                    <td><a href="#">{{ count($event->users) }}</a></td>
                     <td>
                         <form action="/events/leave/{{$event->id}}" method="POST">
                             @csrf
